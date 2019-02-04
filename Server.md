@@ -74,9 +74,7 @@ namespace AltV.Net.Example
 resource.cfg :
 ```
 type: "csharp",
-main: "AltV.Net.Example.dll",
-client-main: "client.mjs",
-client-files: [ "client.mjs" ]
+main: "AltV.Net.Example.dll"
 ```
 ```
 server structure
@@ -85,10 +83,26 @@ modules ->
 resources ->
             my-example-resource ->
                                     AltV.Net.Example.dll
-                                    reosurce.cfg
+                                    reosource.cfg
                                     {any_dll_dependency} AltV.Net.dll, mysql.dll...
 altv-server.exe
 ```
+
+for client resource.cfg :
+```
+type: "js",
+client-main: "client.mjs",
+client-files: [ "client.mjs" ]
+```
+```
+server structure
+resources ->
+            my-example-client-resource ->
+                                    client.mjs
+                                    resource.cfg
+altv-server.exe
+```
+
 
 ## Events
 
