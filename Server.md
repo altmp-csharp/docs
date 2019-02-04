@@ -42,8 +42,14 @@ namespace AltV.Net.Example
         // Dictionary supports only strings for keys
         // When defining object it will accept any supported type including dictionary and arrays
         // Arrays and dictionaries are supporting any type that is supported, an array could create another array that could create another array ect.
-        public void supportedTypes(object obj, object[] objArr, string str, string[] strArray, IVehicle vehicle) {
-        
+        public void supportedTypes(object obj, object[] objArr, string str, string[] strArray, IVehicle vehicle, IPlayer player) {
+            var dict = new Dictionary<string, IVehicle>()
+            {
+                ["test"] = vehicle,
+                ["test2"] = vehicle,
+                ["test3"] = vehicle
+            };
+            player.Call("test_client_event", "test", vehicle, dict);
         }
     }
 }
