@@ -105,7 +105,7 @@ altv-server.exe
 
 for dlc resource.cfg
 ```
-{"main":"__stream.cfg","name":"stream-ap2","type":"dlc"}
+{"main":"__stream.cfg","type":"dlc"}
 ```
 
 ```__stream.cfg```
