@@ -20,9 +20,25 @@ namespace AltV.Net.Example
             Alt.On("test4", simpleTest);
             
             Alt.On<object, object[], string, string[], IVehicle>("test5", supportedTypes);
+            
+            Alt.OnPlayerConnect += OnPlayerConnect;
+            Alt.OnPlayerDisconnect += OnPlayerDisconnect;
+            Alt.OnEntityRemove += OnEntityRemove;
         }
 
         public void OnStop()
+        {
+        }
+        
+        private void OnPlayerConnect(IPlayer player, string reason)
+        {
+        }
+
+        private void OnPlayerDisconnect(IPlayer player, string reason)
+        {
+        }
+
+        private void OnEntityRemove(IEntity entity)
         {
         }
         
