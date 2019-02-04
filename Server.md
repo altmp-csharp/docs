@@ -78,7 +78,7 @@ main: "AltV.Net.Example.dll",
 client-main: "client.mjs",
 client-files: [ "client.mjs" ]
 ```
-
+```
 server structure
 modules -> 
             csharp-module.dll
@@ -88,6 +88,7 @@ resources ->
                                     reosurce.cfg
                                     {any_dll_dependency} AltV.Net.dll, mysql.dll...
 altv-server.exe
+```
 
 ## Events
 
