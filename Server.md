@@ -24,6 +24,11 @@ namespace AltV.Net.Example
             Alt.OnPlayerConnect += OnPlayerConnect;
             Alt.OnPlayerDisconnect += OnPlayerDisconnect;
             Alt.OnEntityRemove += OnEntityRemove;
+            
+            var vehicle = Alt.CreateVehicle(VehicleHash.Apc, Position.Zero, float.MinValue);
+            vehicle.PrimaryColor = 7;
+
+            vehicle.Remove();
         }
 
         public void OnStop()
