@@ -19,7 +19,7 @@ namespace AltV.Net.Example
             
             Alt.On("test4", simpleTest);
             
-            Alt.On("test5", supportedTypes);
+            Alt.On<object, object[], string, string[], IVehicle>("test5", supportedTypes);
         }
 
         public void OnStop()
