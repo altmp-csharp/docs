@@ -40,6 +40,8 @@ namespace AltV.Net.Example
         
         // Supported types bool, int, uint, long, ulong, double, string, IVehicle, IPlayer, IBlip, {supported_type}[], Dictionary<string, {supported_type}>
         // Dictionary supports only strings for keys
+        // When defining object it will accept any supported type including dictionary and arrays
+        // Arrays and dictionaries are supporting any type that is supported, an array could create another array that could create another array ect.
         public void supportedTypes(object obj, object[] objArr, string str, string[] strArray, IVehicle vehicle) {
         
         }
