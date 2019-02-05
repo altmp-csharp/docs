@@ -29,6 +29,18 @@ namespace AltV.Net.Example
             vehicle.PrimaryColor = 7;
 
             vehicle.Remove();
+            
+            Alt.On("function_event", delegate(Function.Func func)
+            {
+                var result = func("parameter1");
+                Alt.Server.LogInfo("result:" + result);
+            });
+
+            Alt.Emit("function_event", Function.Create(delegate(string bla)
+            {
+                Alt.Server.LogInfo("parameter=" + bla);
+                return 42;
+            }));
         }
 
         public void OnStop()
